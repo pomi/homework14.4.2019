@@ -27,8 +27,9 @@ class RandomHotel {
     }
 
     getRandomHotel(){
-        const hotelId = Math.floor(Math.random()*Object.keys(this._getHotelNames()).length);
-        return this._getHotelNames()[hotelId];
+        const hotelNames = this._getHotelNames();
+        const hotelId = Math.floor(Math.random()*hotelNames.length);
+        return hotelNames[hotelId];
     }
 }
 
